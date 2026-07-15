@@ -17,7 +17,7 @@ public class EmpEntity {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private int id;
-    private String User;
+    private String user;
     private String pass;
     private double salary;
     private  int age;

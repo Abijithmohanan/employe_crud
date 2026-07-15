@@ -7,4 +7,6 @@ import java.util.List;
 
 public interface emprepository extends JpaRepository<EmpEntity,Integer> {
 public List<EmpEntity> findByDepartmentAndId(String department,int id);
+
+public List<EmpEntity> findByUserContaining(String user);
 }
