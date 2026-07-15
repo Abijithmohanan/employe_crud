@@ -9,4 +9,6 @@ public interface emprepository extends JpaRepository<EmpEntity,Integer> {
 public List<EmpEntity> findByDepartmentAndId(String department,int id);
 
 public List<EmpEntity> findByUserContaining(String user);
+public List<EmpEntity> findAllByOrderByAgeAsc();
+    public List<EmpEntity> findAllByOrderByAgeDesc();
 }

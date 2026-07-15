@@ -60,6 +60,15 @@ return new ResponseEntity<>(emprepository.save(entity),HttpStatus.OK);
       List<EmpEntity>Result=emprepository.findByUserContaining(user);
       return  new ResponseEntity<>(Result,HttpStatus.OK);
 }
+ @GetMapping("/emp/asc")
+    public ResponseEntity<?> getAsc(@RequestParam String dir){
+    if(dir=="asc"){
+        return  new ResponseEntity<>(emprepository.findAllByOrderByAgeAsc(),HttpStatus.OK);
+    }
+    else{
+        return  new ResponseEntity<>(emprepository.findAllByOrderByAgeDesc(),HttpStatus.OK);
+    }
+ }
 
 
 

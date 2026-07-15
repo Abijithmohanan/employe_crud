@@ -24,3 +24,4 @@ public class EmpEntity {
     private int phone_no;
     private String department;
 }
+
